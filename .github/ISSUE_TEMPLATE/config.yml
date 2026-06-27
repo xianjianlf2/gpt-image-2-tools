@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🌐 Try the live app first / 先在线试一下
+    url: https://image.markxian.cn
+    about: Most "it doesn't work" reports are endpoint/key setup — open Settings → Test connection first.
+  - name: 📖 README (features · self-host · privacy) / 使用说明
+    url: https://github.com/xianjianlf2/gpt-image-2-tools#readme
+    about: What it does, how to self-host, and the privacy model.

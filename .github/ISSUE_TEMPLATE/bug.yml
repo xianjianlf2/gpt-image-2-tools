@@ -1,0 +1,64 @@
+name: Bug report / 反馈问题
+description: Something doesn't work / 哪里不对
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请**绝对不要粘贴你的 API Key**。
+        Thanks for the report! Please **never paste your API key**.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened? / 发生了什么
+      description: 期望是什么、实际是什么 / What you expected vs. what actually happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: false
+  - type: input
+    id: endpoint
+    attributes:
+      label: Endpoint (official / which proxy) / 端点（官方还是哪个中转）
+      description: 这是 BYOK 工具最关键的排障信息 / The single most important detail for a BYOK tool
+      placeholder: e.g. official OpenAI · a proxy gateway · self-hosted
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model / 模型
+      placeholder: e.g. gpt-image-1
+    validations:
+      required: false
+  - type: input
+    id: env
+    attributes:
+      label: Browser & OS / 浏览器和系统
+      placeholder: e.g. Chrome 126 / macOS 15 · iOS Safari
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors / 控制台报错（如有）
+      description: F12 → Console；删掉任何含 key 的内容 / strip anything containing your key
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Confirm / 确认
+      options:
+        - label: I did NOT include my API key anywhere above / 上面没有附上我的 API Key
+          required: true
